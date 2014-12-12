@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Vintage</title>
+
+   <link rel="shortcut icon" href="img/favicon.jpg" />
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scroll.css" rel="stylesheet">
+ 
+
+    <!-- Custom Fonts -->
+
+    <link href="font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+   
+ 
+
+    
+<script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+      <script src="js/grayscale.js"></script>
+      <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+       <script type="text/javascript" src="js/scrollview.js"></script>
+     
+    
+<script>
+$(document).ready(function() {
+		
+
+	
+	$('#gallery a').click(function(evt) {
+		//don't follow link
+		 evt.preventDefault();
+		 //get path to new image
+	   var imgPath = $(this).attr('href');
+		 //get reference to old image
+		 var oldImage = $('#photo img');
+		 			
+			 //create HTML for new image
+			 var newImage = $('<img src="' + imgPath +'">');
+			 //make new image invisible
+			 newImage.hide();
+			 //add to the #photo div
+			 $('#photo').prepend(newImage);
+			 //fade in new image
+			 newImage.slideDown(1000);
+			 
+			 //fade out old image and remove from DOM
+			 oldImage.slideUp(1000,function(){
+		     $(this).remove();
+				});		 
+	}); // end click
+		
+	$('#gallery a:first').click();
+    
+    
+    
+    
+    
+    $('#dashboard').hover(
+     function() {
+		$(this).stop().animate(
+		{
+			left: '0',
+			backgroundColor: 'rgb(27,45,94)'
+		},
+		500,
+		'easeInSine'
+		); // end animate
+	 }, 
+	 function() {
+		 $(this).stop().animate(
+		{
+			left: '-92px',
+			backgroundColor: 'rgb(255,211,224)'
+		},
+		1500,
+		'easeOutBounce'
+		); // end animate
+	 }
+  ); // end hover
+    
+    
+    
+   
+    
+   
+                        
+    
+    
+    
+    
+}); // end ready
+</script>
+
+  
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i>  <span class="light">Vintage</span> Car
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                  
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="#inventory">Inventory</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#location">Location</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="post col-md-8 col-md-offset-2 banner">
+                        <h1 class="brand-heading">Vintage Car</h1>
+                        <p class="intro-text">Welcome to our Car club.</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+     <div id="abou">
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div  id="devices" data-position="right" class="notViewed animBlock floatr">
+                <h2>About Us</h2>
+                </div>
+           
+                <br>
+
+             <div  id="devices" data-position="left" class="notViewed animBlock floatl">
+                <p>
+                    <iframe width="300" height="200" src="//www.youtube.com/embed/CHLZm177Q2Q" frameborder="0" allowfullscreen></iframe>
+                    Vintage Motorcar Company Ltd first opened its doors in 1985 with a dream of restoring and trading in the finest and rarest of classic and performance cars. Our Company soon began producing national show winning restorations and record sales. our facility had grown and sales began to include all makes and models of muscle cars, always staying true to our goal of producing the best.</p>                </div>
+                 <ul class="list-inline banner-social-buttons">
+                    
+                     <div id="devices" data-position="left" class="notViewed animBlock floatl">
+                    <li>
+                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                          </div>
+                    
+                      
+                    <li>
+                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                    </li>
+                     
+                     <div id="devices" data-position="right" class="notViewed animBlock floatr">
+                    <li>
+                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-youtube fa-fw"></i> <span class="network-name">youtube</span></a>
+                    </li>
+                          </div>
+                 
+                </ul>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!-- Download Section -->
+    <div class="inventory">
+        <div id="dashboard">
+<img src="img/car1.jpg" width="70" height="70" alt="blue">
+<img src="img/car2.jpg" width="70" height="70" alt="green">
+<img src="img/car3.jpg" width="70" height="70" alt="orange">
+<img src="img/car4.jpg" width="70" height="70" alt="purple">
+
+</div>
+    <section id="inventory" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+				
+                     <div id="devices" data-position="left" class="notViewed animBlock floatl">
+                    <h2>Inventory</h2>
+					</div>
+			
+                    <br>
+            
+                     <div id="devices" data-position="right" class="notViewed animBlock floatr">
+                   <div id="gallery"> <a href="img/car1.jpg"><img src="img/car1.jpg" width="100" height="100" alt="golf balls"></a> <a href="img/car2.jpg"><img src="img/car2.jpg" width="100" height="100" alt="rock wall"></a> <a href="img/car3.jpg"><img src="img/car3.jpg"width="100" height="100" alt="old course"></a> <a href="img/car4.jpg"><img src="img/car4.jpg" width="100" height="100" alt="tees"></a> </div>
+		<div id="photo" ></div>
+		</div>
+	
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact">
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="post col-lg-8 col-lg-offset-2">
+                
+                 <form>
+                     <section class="clearfix">
+                     <div id="devices" data-position="right" class="notViewed animBlock floatr">
+                <p>
+                    <h2>Contact Us</h2>
+                </p>
+                     </div>
+                     </section>
+                <br>
+                <br>
+                 <section class="clearfix">
+                <div id="devices" data-position="left" class="notViewed animBlock floatl">
+                <p>First Name:
+                    <input class="firstName" type="text" />
+                </p>
+                </div>
+                </section>
+                 <section class="clearfix">
+                <div id="devices" data-position="right" class="notViewed animBlock floatr">
+                <p>Last Name:
+                    <input class="lastName" type="text" />
+                </p>
+                </div>
+                </section>
+                 <section class="clearfix">
+                   <div id="devices" data-position="left" class="notViewed animBlock floatl">
+                <p>Phone Number:
+                    <input class="phoneNumber" type="number" />
+                </p>
+                </div>
+                </section>
+                 <section class="clearfix">
+              <div id="devices" data-position="right" class="notViewed animBlock floatr">
+                <p>Email:
+                    <input class="e-mail" type="email" />
+                </p>
+                </div>
+                </section>
+                 <section class="clearfix">
+                <div id="devices" data-position="left" class="notViewed animBlock floatl">
+                <p>Your Message:
+                    <br>
+                    <br>
+                    <textarea cols="38" rows="5"></textarea>
+                </p>
+                </div>
+                </section>
+                 <section class="clearfix">
+                <div id="devices" data-position="right" class="notViewed animBlock floatr">
+                <p><a class="submit" href="#">Send</a>
+                </p>
+                </div>
+                </section>
+                
+
+            </form>
+
+               
+            </div>
+        </div>
+    </section>
+    </div>
+    
+    
+      <div class="location">
+    <section id="location" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                 <section class="clearfix">
+                     <div id="devices" data-position="right" class="notViewed animBlock floatr">
+                <h2>Location</h2>
+                         </div>
+                </section>
+                 <section class="clearfix">
+                     <div id="devices" data-position="right" class="notViewed animBlock floatr">
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2896.8718620890404!2d-80.48804949999999!3d43.44239209999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf4e555bacafb%3A0x5f13e5b0da8102c4!2s170+Cedar+St+S%2C+Kitchener%2C+ON+N2G+3M1!5e0!3m2!1sen!2sca!4v1415198487473" width="600" height="500" frameborder="0" style="border:0"></iframe>
+                         </div>
+                </section>
+            </div>
+        </div>
+    </section>
+    </div>
+
+  
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Your Website 2014</p>
+        </div>
+    </footer>
+    
+    
+    
+    
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+
+    <!-- Custom Theme JavaScript -->
+  
+
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+       
+
+    
+    
+    
+  
+</body>
+
+</html>
